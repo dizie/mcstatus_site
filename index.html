@@ -116,15 +116,36 @@
             color: white;
         }
 
+        #key {
+          border-collapse: collapse;
+        }
+
+        #key td, #key th {
+          border: 1px solid #ddd;
+          padding: 8px;
+            color: #051414;
+        }
+
+        #key tr:nth-child(even){background-color: #f2f2f2;}
+
+            #key tr:nth-child(odd){background-color: #fff;}
+
+        #key tr:hover {background-color: #ddd;}
+
+        #key th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+
         .dot {
             height: 15px;
             width: 15px;
             border-radius: 50%;
             display: block;
             margin-left: 10px;
-        }
-
-        #dot {
             background-color: grey;
         }
     </style>
@@ -158,6 +179,26 @@
             <td><span id="dot" class="dot"></span></td>
         </tr>
 </table>
+
+  <p></p>
+    <table id="key">
+        <tr>
+            <th>Key</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><span class="dot" style="background-color: grey;"></span></td>
+            <td>Waiting to connect</td>
+        </tr>
+        <tr>
+            <td><span class="dot" style="background-color: red;"></span></td>
+            <td>Server is offline or an invalid response was received</td>
+        </tr>
+        <tr>
+            <td><span class="dot" style="background-color: #4CAF50;"></span></td>
+            <td>Server is online</td>
+        </tr>
+    </table>
 </div>
 </body>
 
